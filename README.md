@@ -57,7 +57,7 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
 </td>
 <td width="50%">
 
-*Space for future preset or feature*
+*Maybe More in near future*
 
 </td>
 </tr>
