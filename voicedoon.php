@@ -70,12 +70,14 @@ if (!class_exists('WBDN_Voice_Player')) {
 			$url = plugin_dir_url(__FILE__);
 			$ver = self::VERSION;
 			wp_register_style('wbdn-voice-player', $url . 'assets/css/player.css', array(), $ver);
+			wp_register_style('wbdn-voice-fonts', $url . 'assets/css/fonts.css', array(), $ver);
 			wp_register_script('wbdn-voice-player', $url . 'assets/js/player.js', array(), $ver, true);
 		}
 
 		private function enqueue_assets() {
 			$this->register_assets();
 			wp_enqueue_style('wbdn-voice-player');
+			wp_enqueue_style('wbdn-voice-fonts');
 			wp_enqueue_script('wbdn-voice-player');
 		}
 
@@ -102,6 +104,7 @@ if (!class_exists('WBDN_Voice_Player')) {
 			wp_add_inline_script('wp-color-picker', '(function($){$(".wbdn-voice-color-field").wpColorPicker();})(jQuery);');
 			// Enqueue custom admin assets
 			$base_url = plugin_dir_url(__FILE__);
+			wp_enqueue_style('wbdn-voice-admin-fonts', $base_url . 'assets/css/fonts.css', array(), self::VERSION);
 			wp_enqueue_style('wbdn-voice-admin', $base_url . 'assets/admin.css', array(), self::VERSION);
 			wp_enqueue_script('wbdn-voice-admin', $base_url . 'assets/admin.js', array(), self::VERSION, true);
 			$active_tab = isset($_GET['tab']) ? sanitize_key($_GET['tab']) : 'settings';

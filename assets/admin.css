@@ -1,13 +1,123 @@
-.wbdn-voice-admin .nav-tab-wrapper {
-    margin-bottom: 16px
+.wbdn-voice-admin p,
+.wbdn-voice-admin h1,
+.wbdn-voice-admin h2,
+.wbdn-voice-admin h3,
+.wbdn-voice-admin h4,
+.wbdn-voice-admin h5,
+.wbdn-voice-admin h6,
+.wbdn-voice-admin span,
+.wbdn-voice-admin a,
+.wbdn-voice-admin p,
+.wbdn-voice-admin a,
+.wbdn-voice-admin button,
+.wbdn-voice-admin input,
+.wbdn-voice-admin textarea,
+.wbdn-voice-admin select,
+.wbdn-voice-admin option,
+.wbdn-voice-admin label,
+.wbdn-voice-admin th,
+.wbdn-voice-admin td,
+.wbdn-voice-admin tr,
+.wbdn-voice-admin tbody,
+.wbdn-voice-admin thead,
+.wbdn-voice-admin tfoot,
+.wbdn-voice-admin table,
+.wbdn-voice-admin form,
+.wbdn-voice-admin div,
+.wbdn-voice-admin input[type="text"],
+.wbdn-voice-admin input[type="password"],
+.wbdn-voice-admin input[type="email"],
+.wbdn-voice-admin input[type="number"] {
+    font-family: 'Vazirmatn', sans-serif;
 }
 
+/* Buttons */
+.submit button,
+.submit button:hover,
+.submit button:active,
+.submit input[type="submit"],
+.submit input[type="submit"]:hover,
+.submit input[type="submit"]:active {
+    background-color: #4880FF !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease;
+}
+
+.submit button:hover,
+.submit input[type="submit"]:hover {
+    background-color: #285abf !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease;
+    }
+
+.submit button:active,
+.submit input[type="submit"]:active {
+    background-color: #224499 !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease;
+}
+
+.nav-tab-wrapper,
+.wrap h2.nav-tab-wrapper,
+h1.nav-tab-wrapper {
+    border: 0;
+}
+
+/* Card Layouts */
+.nav-tab-wrapper,
 .wbdn-voice-admin .wbdn-voice-card {
     background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px !important;
+    box-shadow: 6px 6px 54px rgba(0, 0, 0, .05);
+}
+
+.wbdn-voice-admin .nav-tab-wrapper {
+    padding: 5px !important;
+}
+
+
+.nav-tab {
+    float: right;
+    border: 0;
+    border-bottom: none;
+    margin-right: .5em;
+    padding: 15px 30px;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 600;
+    background: transparent;
+    color: #50575e;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 15px;
+    border-bottom: 0;
+
+}
+
+.nav-tab:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-tab-active,
+.nav-tab-active:focus,
+.nav-tab-active:focus:active,
+.nav-tab-active:hover {
+    background: #000;
+    color: #fff;
 }
 
 .wbdn-voice-admin .wbdn-voice-card h3 {
