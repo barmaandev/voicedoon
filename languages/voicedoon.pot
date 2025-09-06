@@ -1,4 +1,4 @@
-# Voice Doon Persian Translation
+# Voice Doon WordPress Plugin
 # Copyright (C) 2024 WebDoon
 # This file is distributed under the same license as the Voice Doon package.
 msgid ""
@@ -8,8 +8,8 @@ msgstr ""
 "POT-Creation-Date: 2024-01-01 12:00+0000\n"
 "PO-Revision-Date: 2024-01-01 12:00+0000\n"
 "Last-Translator: WebDoon Team\n"
-"Language-Team: Persian\n"
-"Language: fa_IR\n"
+"Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,156 +17,160 @@ msgstr ""
 
 #: voicedoon.php:115
 msgid "Settings"
-msgstr "تنظیمات"
+msgstr ""
 
 #: voicedoon.php:116
 msgid "Documents"
-msgstr "مستندات"
+msgstr ""
+
+#: voicedoon.php:120
+msgid "Settings"
+msgstr ""
 
 #: voicedoon.php:131
 msgid "Usage"
-msgstr "نحوه استفاده"
+msgstr ""
 
 #: voicedoon.php:132
 msgid "Use the shortcode in posts, pages, or widgets. In the block editor, add a Shortcode block."
-msgstr "از شورت‌کد در پست‌ها، صفحات یا ویجت‌ها استفاده کنید. در ویرایشگر بلاک، یک بلاک شورت‌کد اضافه کنید."
+msgstr ""
 
 #: voicedoon.php:137
 msgid "Attributes"
-msgstr "ویژگی‌ها"
+msgstr ""
 
 #: voicedoon.php:139
 msgid "Audio file URL (required)."
-msgstr "آدرس فایل صوتی (اجباری)."
+msgstr ""
 
 #: voicedoon.php:140
 msgid "Optional title label."
-msgstr "برچسب عنوان اختیاری."
+msgstr ""
 
 #: voicedoon.php:141
 msgid "Wave bar color."
-msgstr "رنگ نوار موج."
+msgstr ""
 
 #: voicedoon.php:142
 msgid "Played overlay color."
-msgstr "رنگ لایه پخش شده."
+msgstr ""
 
 #: voicedoon.php:143
 msgid "Canvas background color."
-msgstr "رنگ پس‌زمینه کانوس."
+msgstr ""
 
 #: voicedoon.php:144
 msgid "Canvas height in pixels."
-msgstr "ارتفاع کانوس بر حسب پیکسل."
+msgstr ""
 
 #: voicedoon.php:145
 msgid "Audio preload attribute (none|metadata|auto)."
-msgstr "ویژگی پیش‌بارگذاری صدا (none|metadata|auto)."
+msgstr ""
 
 #: voicedoon.php:146
 msgid "When to load audio and waveform (view|click)."
-msgstr "زمان بارگذاری صدا و موج (view|click)."
+msgstr ""
 
 #: voicedoon.php:157
 msgid "Modern (Default)"
-msgstr "مدرن (پیش‌فرض)"
+msgstr ""
 
 #: voicedoon.php:158
 msgid "Minimal"
-msgstr "مینیمال"
+msgstr ""
 
 #: voicedoon.php:159
 msgid "Neon"
-msgstr "نئون"
+msgstr ""
 
 #: voicedoon.php:160
 msgid "Wave (Continuous)"
-msgstr "موج (پیوسته)"
+msgstr ""
 
 #: voicedoon.php:161
 msgid "Wave Top (Half)"
-msgstr "موج بالا (نیمه)"
+msgstr ""
 
 #: voicedoon.php:229
 msgid "On View"
-msgstr "در نمایش"
+msgstr ""
 
 #: voicedoon.php:230
 msgid "On Click"
-msgstr "در کلیک"
+msgstr ""
 
 #: voicedoon.php:285
 msgid "Outside (left of waveform)"
-msgstr "خارج (سمت چپ موج)"
+msgstr ""
 
 #: voicedoon.php:286
 msgid "Inside (within waveform area)"
-msgstr "داخل (درون ناحیه موج)"
+msgstr ""
 
 #: voicedoon.php:295
 msgid "Bars"
-msgstr "میله‌ها"
+msgstr ""
 
 #: voicedoon.php:296
 msgid "Line"
-msgstr "خط"
+msgstr ""
 
 #: voicedoon.php:297
 msgid "Continuous (Filled)"
-msgstr "پیوسته (پر شده)"
+msgstr ""
 
 #: voicedoon.php:435
 msgid "Default Settings"
-msgstr "تنظیمات پیش‌فرض"
+msgstr ""
 
 #: voicedoon.php:436
 msgid "Configure default appearance and behavior. Shortcode attributes override these."
-msgstr "ظاهر و رفتار پیش‌فرض را پیکربندی کنید. ویژگی‌های شورت‌کد این موارد را لغو می‌کند."
+msgstr ""
 
 #: voicedoon.php:439
 msgid "Design Preset"
-msgstr "پیش‌تنظیم طراحی"
+msgstr ""
 
 #: voicedoon.php:440
 msgid "Wave Style"
-msgstr "سبک موج"
+msgstr ""
 
 #: voicedoon.php:441
 msgid "Button position"
-msgstr "موقعیت دکمه"
+msgstr ""
 
 #: voicedoon.php:442
 msgid "Load on"
-msgstr "بارگذاری در"
+msgstr ""
 
 #: voicedoon.php:443
 msgid "Preload"
-msgstr "پیش‌بارگذاری"
+msgstr ""
 
 #: voicedoon.php:444
 msgid "Wave height (px)"
-msgstr "ارتفاع موج (پیکسل)"
+msgstr ""
 
 #: voicedoon.php:445
 msgid "Bar radius (px)"
-msgstr "شعاع میله (پیکسل)"
+msgstr ""
 
 #: voicedoon.php:446
 msgid "Accent color"
-msgstr "رنگ تاکید"
+msgstr ""
 
 #: voicedoon.php:447
 msgid "Progress color"
-msgstr "رنگ پیشرفت"
+msgstr ""
 
 #: voicedoon.php:448
 msgid "Background color"
-msgstr "رنگ پس‌زمینه"
-
-#: voicedoon.php:93
-msgid "Help"
-msgstr "راهنما"
+msgstr ""
 
 #: voicedoon.php:84
 msgid "Voice Doon"
-msgstr "ویس‌دون"
+msgstr ""
+
+#: voicedoon.php:93
+msgid "Help"
+msgstr ""

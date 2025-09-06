@@ -81,8 +81,8 @@ if (!class_exists('WBDN_Voice_Player')) {
 
 		public function register_help_page() {
 			add_options_page(
-				__('Voice Doon', 'voicedoon'),
-				__('Voice Doon', 'voicedoon'),
+				__('ویس‌دون', 'voicedoon'),
+				__('ویس‌دون', 'voicedoon'),
 				'manage_options',
 				'wbdn-voice-help',
 				array($this, 'render_help_page')
@@ -110,7 +110,7 @@ if (!class_exists('WBDN_Voice_Player')) {
 			}
 			?>
 			<div class="wrap wbdn-voice-admin">
-				<h1><?php esc_html_e('Voice Doon', 'voicedoon'); ?></h1>
+				<h1><?php esc_html_e('ویس‌دون', 'voicedoon'); ?></h1>
 				<h2 class="nav-tab-wrapper">
 					<a href="<?php echo esc_url(add_query_arg(array('page' => 'wbdn-voice-help', 'tab' => 'settings'), admin_url('options-general.php'))); ?>" class="nav-tab <?php echo $active_tab === 'settings' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Settings', 'voicedoon'); ?></a>
 					<a href="<?php echo esc_url(add_query_arg(array('page' => 'wbdn-voice-help', 'tab' => 'docs'), admin_url('options-general.php'))); ?>" class="nav-tab <?php echo $active_tab === 'docs' ? 'nav-tab-active' : ''; ?>"><?php esc_html_e('Documents', 'voicedoon'); ?></a>
