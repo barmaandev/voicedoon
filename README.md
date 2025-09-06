@@ -15,6 +15,13 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
 - 🧱 **Gutenberg Ready**: Block editor integration
 - ✏️ **TinyMCE Button**: Classic editor support
 
+## Screenshots
+
+### Design Presets Preview: Moderen 
+![Voice Doon Presets](screenshots/presets-preview-modren.png)
+*All 5 design presets: Modern, Minimal, Neon, Wave, and Wave Top*
+
+
 ## Installation
 
 1. Upload the plugin folder to `/wp-content/plugins/`

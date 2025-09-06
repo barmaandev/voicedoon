@@ -54,3 +54,10 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+
+# Screenshots (keep these in git for documentation)
+!screenshots/
+!screenshots/*.png
+!screenshots/*.jpg
+!screenshots/*.jpeg
+!screenshots/README.md

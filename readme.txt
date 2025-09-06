@@ -117,6 +117,8 @@ This plugin is developed by WebDoon. For issues and contributions, please visit 
 5. Player with wave preset
 6. Block editor integration
 
+== Frequently Asked Questions ==
+
 == Changelog ==
 
 = 1.0.0 =
