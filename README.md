@@ -17,9 +17,74 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
 
 ## Screenshots
 
-### Design Presets Preview: Moderen 
-![Voice Doon Presets](screenshots/presets-preview-modren.png)
-*All 5 design presets: Modern, Minimal, Neon, Wave, and Wave Top*
+### Design Presets Preview
+
+<table>
+<tr>
+<td width="50%">
+
+![Voice Doon Modern Preset](screenshots/presets-preview-modern.png)
+*Modern preset - Clean bars with subtle shadows*
+
+</td>
+<td width="50%">
+
+![Voice Doon Minimal Preset](screenshots/presets-preview-minimal.png)
+*Minimal preset - Thin lines with elegant spacing*
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+![Voice Doon Neon Preset](screenshots/presets-preview-neon.png)
+*Neon preset - Glowing bars with dark theme*
+
+</td>
+<td width="50%">
+
+![Voice Doon Wave Preset](screenshots/presets-preview-continuous.png)
+*Wave preset - Continuous filled waveform*
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+![Voice Doon Wave Top Preset](screenshots/presets-preview-continuous-half.png)
+*Wave Top preset - Only upper half of waveform*
+
+</td>
+<td width="50%">
+
+*Space for future preset or feature*
+
+</td>
+</tr>
+</table>
+
+### Player & Settings
+
+<table>
+<tr>
+<td width="50%">
+
+![Voice Doon Player](screenshots/player-demo.png)
+*Voice Doon player with custom colors and settings*
+
+</td>
+<td width="50%">
+
+![Voice Doon Settings](screenshots/settings-page.png)
+*Admin settings page with all customization options*
+
+</td>
+</tr>
+</table>
+
+### Block Editor Integration
+![Gutenberg Block](screenshots/gutenberg-block.png)
+*Voice Doon block in the WordPress block editor*
 
 
 ## Installation
