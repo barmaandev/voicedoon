@@ -2,6 +2,8 @@
 
 A lightweight, modern audio player with a canvas waveform for WordPress. No external libraries. Fast, clean, and customizable with Persian/Farsi support.
 
+> **📖 [README in Persian / README به فارسی](README-fa.md)**
+
 ## Features
 
 - 🎵 **Canvas-based Waveform**: Beautiful waveforms rendered using HTML5 Canvas
@@ -62,29 +64,6 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
 </td>
 </tr>
 </table>
-
-### Player & Settings
-
-<table>
-<tr>
-<td width="50%">
-
-![Voice Doon Player](screenshots/player-demo.png)
-*Voice Doon player with custom colors and settings*
-
-</td>
-<td width="50%">
-
-![Voice Doon Settings](screenshots/settings-page.png)
-*Admin settings page with all customization options*
-
-</td>
-</tr>
-</table>
-
-### Block Editor Integration
-![Gutenberg Block](screenshots/gutenberg-block.png)
-*Voice Doon block in the WordPress block editor*
 
 
 ## Installation
