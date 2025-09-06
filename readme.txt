@@ -49,12 +49,12 @@ Voice Doon is a lightweight podcast/audio player that renders a beautiful wavefo
 
 **Basic Usage:**
 ```
-[podcast_player src="https://example.com/audio.mp3"]
+[voicedoon src="https://example.com/audio.mp3"]
 ```
 
 **With Custom Options:**
 ```
-[podcast_player src="https://example.com/audio.mp3" title="Episode 1" preset="wave" button_position="inside" accent="#3b82f6" bg="#f3f4f6" progress="#111827"]
+[voicedoon src="https://example.com/audio.mp3" title="Episode 1" preset="wave" button_position="inside" accent="#3b82f6" bg="#f3f4f6" progress="#111827"]
 ```
 
 **All Available Attributes:**

@@ -61,15 +61,15 @@
 						])
 					),
 					el('div', { className: 'wbdn-voice-block-preview' }, [
-						el('p', {}, 'Podcast Player'),
-						el('code', {}, `[podcast_player src="${attrs.src||''}" title="${attrs.titleText||''}" preset="${attrs.preset}" button_position="${attrs.button_position}"]`)
+						el('p', {}, 'Voice Doon Player'),
+						el('code', {}, `[voicedoon src="${attrs.src||''}" title="${attrs.titleText||''}" preset="${attrs.preset}" button_position="${attrs.button_position}"]`)
 					])
 				]
 			);
 		},
 		save: function(props){
 			const a = props.attributes;
-			const shortcode = `[podcast_player src="${a.src||''}" title="${a.titleText||''}" preset="${a.preset}" button_position="${a.button_position}"]`;
+			const shortcode = `[voicedoon src="${a.src||''}" title="${a.titleText||''}" preset="${a.preset}" button_position="${a.button_position}"]`;
 			return el('p', {}, shortcode);
 		}
 	});

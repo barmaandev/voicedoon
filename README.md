@@ -77,12 +77,12 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
 
 ### Basic Shortcode
 ```
-[podcast_player src="https://example.com/audio.mp3"]
+[voicedoon src="https://example.com/audio.mp3"]
 ```
 
 ### Advanced Shortcode
 ```
-[podcast_player 
+[voicedoon 
     src="https://example.com/audio.mp3" 
     title="Episode 1" 
     preset="wave" 

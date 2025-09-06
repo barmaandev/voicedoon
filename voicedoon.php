@@ -27,7 +27,7 @@ if (!class_exists('WBDN_Voice_Player')) {
 		}
 
 		private function __construct() {
-			add_shortcode('podcast_player', array($this, 'shortcode'));
+			add_shortcode('voicedoon', array($this, 'shortcode'));
 			add_action('wp_enqueue_scripts', array($this, 'register_assets'));
 			add_action('enqueue_block_editor_assets', array($this, 'enqueue_block_assets'));
 			add_action('init', array($this, 'load_textdomain'));
@@ -130,10 +130,10 @@ if (!class_exists('WBDN_Voice_Player')) {
 					<div class="wbdn-voice-card">
 						<h3><?php esc_html_e('Usage', 'voicedoon'); ?></h3>
 						<p><?php esc_html_e('Use the shortcode in posts, pages, or widgets. In the block editor, add a Shortcode block.', 'voicedoon'); ?></p>
-						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[podcast_player src="https://example.com/audio.mp3"]</code></pre></div>
-						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[podcast_player src="https://example.com/audio.mp3" title="Episode 1" accent="#22c55e" progress="#0f172a" bg="#e5e7eb"]</code></pre></div>
-						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[podcast_player src="https://example.com/audio.mp3" height="56" preload="metadata"]</code></pre></div>
-						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[podcast_player src="https://example.com/audio.mp3" load_on="click"]</code></pre></div>
+						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[voicedoon src="https://example.com/audio.mp3"]</code></pre></div>
+						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[voicedoon src="https://example.com/audio.mp3" title="Episode 1" accent="#22c55e" progress="#0f172a" bg="#e5e7eb"]</code></pre></div>
+						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[voicedoon src="https://example.com/audio.mp3" height="56" preload="metadata"]</code></pre></div>
+						<div class="wbdn-voice-code"><button type="button" class="wbdn-voice-copy">Copy</button><pre><code>[voicedoon src="https://example.com/audio.mp3" load_on="click"]</code></pre></div>
 						<h3><?php esc_html_e('Attributes', 'voicedoon'); ?></h3>
 						<ul>
 							<li><strong>src</strong> — <?php esc_html_e('Audio file URL (required).', 'voicedoon'); ?></li>
@@ -317,7 +317,7 @@ if (!class_exists('WBDN_Voice_Player')) {
 				'preset' => $defaults['preset'],
 				'wave_style' => $defaults['wave_style'],
 				'button_position' => $defaults['button_position'],
-			), $atts, 'podcast_player');
+			), $atts, 'voicedoon');
 
 			// Apply preset defaults if user selected a preset and did not override specific fields
 			$preset = isset($atts['preset']) ? sanitize_key($atts['preset']) : 'modern';
