@@ -1,0 +1,53 @@
+.wbdn-voice-admin .nav-tab-wrapper {
+    margin-bottom: 16px
+}
+
+.wbdn-voice-admin .wbdn-voice-card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0
+}
+
+.wbdn-voice-admin .wbdn-voice-card h3 {
+    margin-top: 0
+}
+
+.wbdn-voice-admin .wbdn-voice-code {
+    position: relative;
+    margin: 12px 0
+}
+
+.wbdn-voice-admin .wbdn-voice-code pre {
+    text-align: left;
+    background: #0b1220;
+    color: #e5edff;
+    border-radius: 8px;
+    padding: 12px 14px;
+    overflow: auto
+}
+
+.wbdn-voice-admin .wbdn-voice-copy {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #111827;
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer
+}
+
+.wbdn-voice-admin .wbdn-voice-copy.is-copied {
+    background: #16a34a
+}
+
+.wbdn-voice-admin .form-table th {
+    width: 220px
+}
+
+.wbdn-voice-admin .wp-picker-container {
+    vertical-align: middle
+}

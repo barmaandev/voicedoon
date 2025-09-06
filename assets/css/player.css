@@ -1,0 +1,206 @@
+.wbdn-voice-player {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 100%;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+}
+
+.wbdn-voice-button {
+    border: 0;
+    background: #111827;
+    color: #fff;
+    border-radius: 9999px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer
+}
+
+.wbdn-voice-button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px
+}
+
+.wbdn-voice-icon {
+    font-size: 14px;
+    line-height: 1
+}
+
+.wbdn-voice-wave-wrap {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+/* When button is inside wave-wrap, lay out horizontally and center */
+.wbdn-voice-btn-inside .wbdn-voice-wave-wrap {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 8px 10px;
+    overflow: hidden;
+    direction: ltr
+}
+
+.wbdn-voice-btn-inside .wbdn-voice-wave-wrap .wbdn-voice-button {
+    grid-column: 1;
+    grid-row: 1;
+    width: 40px;
+    height: 40px;
+    flex: none
+}
+
+.wbdn-voice-btn-inside .wbdn-voice-wave-wrap .wbdn-voice-wave {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    max-width: 100%
+}
+
+.wbdn-voice-btn-inside .wbdn-voice-wave-wrap .wbdn-voice-time {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.wbdn-voice-wave {
+    max-width: 100%;
+    width: 100%;
+    height: 64px;
+    display: block;
+    border-radius: 0
+}
+
+.wbdn-voice-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #4b5563
+}
+
+.wbdn-voice-title {
+    font-size: 14px;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 240px
+}
+
+@media (max-width:480px) {
+    .wbdn-voice-title {
+        display: none
+    }
+}
+
+/* Modern Preset (Default) */
+.wbdn-voice-preset-modern .wbdn-voice-button {
+    background: #111827;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
+}
+
+.wbdn-voice-preset-modern .wbdn-voice-wave-wrap {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px
+}
+
+.wbdn-voice-preset-modern .wbdn-voice-time {
+    font-weight: 500
+}
+
+/* Minimal Preset */
+.wbdn-voice-preset-minimal .wbdn-voice-player {
+    gap: 16px
+}
+
+.wbdn-voice-preset-minimal .wbdn-voice-button {
+    background: #6b7280;
+    width: 36px;
+    height: 36px
+}
+
+.wbdn-voice-preset-minimal .wbdn-voice-wave-wrap {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px
+}
+
+.wbdn-voice-preset-minimal .wbdn-voice-time {
+    font-size: 11px;
+    color: #9ca3af;
+    font-weight: 400
+}
+
+.wbdn-voice-preset-minimal .wbdn-voice-title {
+    color: #374151;
+    font-weight: 500
+}
+
+/* Neon Preset */
+.wbdn-voice-preset-neon .wbdn-voice-player {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3)
+}
+
+.wbdn-voice-preset-neon .wbdn-voice-button {
+    background: #10b981;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5)
+}
+
+.wbdn-voice-preset-neon .wbdn-voice-wave-wrap {
+    background: #1e293b;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #334155
+}
+
+.wbdn-voice-preset-neon .wbdn-voice-time {
+    color: #94a3b8;
+    font-weight: 500
+}
+
+.wbdn-voice-preset-neon .wbdn-voice-title {
+    color: #f1f5f9
+}
+
+/* Wave Preset */
+.wbdn-voice-preset-wave .wbdn-voice-button {
+    background: #0f172a
+}
+
+.wbdn-voice-preset-wave .wbdn-voice-wave-wrap {
+    background: #f3f4f6;
+    border-radius: 8px;
+    padding: 12px
+}
+
+.wbdn-voice-preset-wave .wbdn-voice-time {
+    font-weight: 500
+}
+
+/* Wave Top Preset */
+.wbdn-voice-preset-wave_top .wbdn-voice-button {
+    background: #111827
+}
+
+.wbdn-voice-preset-wave_top .wbdn-voice-wave-wrap {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px
+}
+
+.wbdn-voice-preset-wave_top .wbdn-voice-time {
+    font-weight: 500
+}
