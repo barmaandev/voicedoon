@@ -4,6 +4,29 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
 
 > **📖 [README in Persian / README به فارسی](README-fa.md)**
 
+## Table of contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Basic Shortcode](#basic-shortcode)
+  - [Advanced Shortcode](#advanced-shortcode)
+- [Using without WordPress (pure PHP)](#using-without-wordpress-pure-php)
+  - [Files you need](#files-you-need)
+  - [Minimal HTML](#minimal-html)
+  - [Rendering from PHP](#rendering-from-php)
+  - [Notes](#notes)
+- [Available Attributes](#available-attributes)
+- [Design Presets](#design-presets)
+- [Development](#development)
+- [Browser Support](#browser-support)
+- [License](#license)
+- [Author](#author)
+- [Changelog](#changelog)
+- [Contributing](#contributing)
+- [Support](#support)
+
 ## Features
 
 - 🎵 **Canvas-based Waveform**: Beautiful waveforms rendered using HTML5 Canvas
@@ -97,6 +120,118 @@ A lightweight, modern audio player with a canvas waveform for WordPress. No exte
     preload="metadata"
 ]
 ```
+
+## Using without WordPress (pure PHP)
+
+You can use the same lightweight player in any PHP or non‑WordPress project. The WordPress plugin normally outputs the HTML and enqueues assets; outside WordPress, you just include the CSS/JS yourself and render the same HTML structure with `data-*` attributes. The script automatically initializes every element with the `wbdn-voice-player` class when it comes into view.
+
+### Files you need
+
+- `assets/css/player.css`
+- `assets/css/fonts.css`
+- `assets/js/player.js`
+
+Copy these files to your project (preserving paths), or serve them directly from where the plugin lives on your server.
+
+### Minimal HTML
+
+```html
+<link rel="stylesheet" href="/path/to/assets/css/fonts.css">
+<link rel="stylesheet" href="/path/to/assets/css/player.css">
+
+<div class="wbdn-voice-player wbdn-voice-preset-modern wbdn-voice-btn-outside"
+     data-src="https://example.com/audio.mp3"
+     data-title="Episode 1"
+     data-accent="#3b82f6"
+     data-bg="#f3f4f6"
+     data-progress="#111827"
+     data-height="64"
+     data-preload="none"
+     data-load-on="view"
+     data-radius="2"
+     data-preset="modern"
+     data-wave-style="bars">
+  <button class="wbdn-voice-button" aria-label="Play"><span class="wbdn-voice-icon">▶</span></button>
+  <div class="wbdn-voice-wave-wrap">
+    <canvas class="wbdn-voice-wave"></canvas>
+    <div class="wbdn-voice-time">
+      <span class="wbdn-voice-current">0:00</span>
+      <span class="wbdn-voice-duration">--:--</span>
+    </div>
+  </div>
+  <div class="wbdn-voice-title">Episode 1</div>
+  <noscript><audio controls src="https://example.com/audio.mp3"></audio></noscript>
+</div>
+
+<script src="/path/to/assets/js/player.js"></script>
+```
+
+No extra init code is required; `player.js` observes the DOM and initializes players lazily.
+
+### Rendering from PHP
+
+```php
+<?php
+function render_voicedoon_player($src, $options = []) {
+    $defaults = [
+        'title' => '',
+        'accent' => '#3b82f6',
+        'bg' => '#f3f4f6',
+        'progress' => '#111827',
+        'height' => 64,
+        'preload' => 'none',      // none | metadata | auto
+        'load_on' => 'view',      // view | click
+        'radius' => 2,
+        'preset' => 'modern',     // modern | minimal | neon | wave | wave_top
+        'wave_style' => 'bars',   // bars | line | continuous
+        'button_position' => 'outside', // outside | inside
+    ];
+    $o = array_merge($defaults, $options);
+    $btnClass = $o['button_position'] === 'inside' ? 'wbdn-voice-btn-inside' : 'wbdn-voice-btn-outside';
+    ?>
+<div class="wbdn-voice-player wbdn-voice-preset-<?= htmlspecialchars($o['preset']) ?> <?= $btnClass ?>"
+     data-src="<?= htmlspecialchars($src) ?>"
+     data-title="<?= htmlspecialchars($o['title']) ?>"
+     data-accent="<?= htmlspecialchars($o['accent']) ?>"
+     data-bg="<?= htmlspecialchars($o['bg']) ?>"
+     data-progress="<?= htmlspecialchars($o['progress']) ?>"
+     data-height="<?= (int) $o['height'] ?>"
+     data-preload="<?= htmlspecialchars($o['preload']) ?>"
+     data-load-on="<?= htmlspecialchars($o['load_on']) ?>"
+     data-radius="<?= (int) $o['radius'] ?>"
+     data-preset="<?= htmlspecialchars($o['preset']) ?>"
+     data-wave-style="<?= htmlspecialchars($o['wave_style']) ?>">
+  <?php if ($o['button_position'] === 'outside'): ?>
+  <button class="wbdn-voice-button" aria-label="Play"><span class="wbdn-voice-icon">▶</span></button>
+  <?php endif; ?>
+  <div class="wbdn-voice-wave-wrap">
+    <?php if ($o['button_position'] === 'inside'): ?>
+    <button class="wbdn-voice-button" aria-label="Play"><span class="wbdn-voice-icon">▶</span></button>
+    <?php endif; ?>
+    <canvas class="wbdn-voice-wave"></canvas>
+    <div class="wbdn-voice-time">
+      <span class="wbdn-voice-current">0:00</span>
+      <span class="wbdn-voice-duration">--:--</span>
+    </div>
+  </div>
+  <?php if (!empty($o['title'])): ?>
+  <div class="wbdn-voice-title"><?= htmlspecialchars($o['title']) ?></div>
+  <?php endif; ?>
+  <noscript><audio controls src="<?= htmlspecialchars($src) ?>"></audio></noscript>
+</div>
+<?php }
+?>
+```
+
+Include the CSS and JS once on the page (see Minimal HTML). Then call `render_voicedoon_player()` wherever you need a player.
+
+### Notes
+
+- **CORS**: Waveform is built via `fetch()` + Web Audio. If audio is on another domain, enable cross‑origin requests (e.g., `Access-Control-Allow-Origin`).
+- **Autoloading**: `data-load-on="click"` defers loading/decoding until the user clicks; `view` starts as soon as in viewport.
+- **Accessibility**: The play button includes an `aria-label`. Add more labels where appropriate.
+- **Customization**: All WordPress shortcode attributes map to the same `data-*` attributes here.
+- **Styling**: Override via CSS or switch `data-preset`.
 
 ### Available Attributes
 
